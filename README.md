@@ -1,4 +1,5 @@
 # digital_banking_fronEnd
+#I am learning this from Professor Mohamed Lyoussfi. 
 This is a frontend project for a digital banking application, built with Angular. The project includes user interfaces for managing customers, accounts, and transactions.
 
 Features
