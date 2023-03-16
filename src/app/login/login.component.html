@@ -1,0 +1,32 @@
+<div class='row mt-5'>
+  <div class="col-md-6 offset-3 ">
+    <div class="card m-5 p-5">
+      <div class="card-body text-center">
+        <span class="card-title">Page de connexion</span>
+        <p><em>{{message}}</em></p>
+      </div>
+      <form [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
+        <div class="mb-3 mt-3">
+          <label for="name">Username</label>
+          <input type="text" id="name" formControlName="username" class="form-control">
+          <span class="text-danger" *ngIf="loginFormGroup.controls['username'].touched &&
+            loginFormGroup.controls['username'].errors &&
+            loginFormGroup.controls['username'].errors!['required']">
+            Username Is Required
+          </span>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" class="form-control">
+          <span class="text-danger" *ngIf="loginFormGroup.controls['password'].touched &&
+            loginFormGroup.controls['password'].errors &&
+            loginFormGroup.controls['password'].errors!['required']">
+            Password Is Required
+          </span>
+        </div>
+        <button [disabled]="!loginFormGroup.valid" class="btn btn-info" >Save</button>
+      </form>
+
+    </div>
+  </div>
+</div>
